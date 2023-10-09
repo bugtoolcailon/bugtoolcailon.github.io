@@ -1,1 +1,1 @@
-hello work
+echo '{"ok":"hi"}';
