@@ -12,34 +12,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
-:root {
-  --pink-color: #f2726a;
+    <style>  display: inline-block;
+  font-size: 18px;
+  transition: 0.25s;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.card__social a:hover {
+  color: var(--pink-color);
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(45deg, #00853e, #50c878);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--pink-color);
+  padding: 10px 20px;
+  border-radius: inherit;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.card {
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
-  text-align: center;
-  background-color: #242628;
-  overflow: hidden;</style>
+button:hover {
+  background-color: var(--pink-color);
+}
+</style>
   </head>
   <body>
     <div class="card">
@@ -51,3 +48,18 @@ body {
       <div class="card__social">
         <a target="_black" href="https://www.facebook.com/Developer.NXT.IT">
           <i class="fab fa-facebook-f"></i>
+        </a>
+        <a target="_black" href="https://www.youtube.com/c/NguyenXuanTrinh">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          target="_black"
+          href="https://github.com/@nguyenxuantrinhnotpd">
+          <i class="fab fa-github"></i>
+        </a>
+      </divdiv>
+      <button>Contact me</button>
+    </div>
+  </body>
+  </html>
+  
