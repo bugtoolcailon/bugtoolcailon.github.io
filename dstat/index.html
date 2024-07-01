@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hiển thị số requests đang truy cập</title>
+<title>Count</title>
 <script>
     // Tạo biến global để lưu số lượng requests
     var requestCount = 0;
@@ -16,7 +16,7 @@
 
     // Cập nhật giao diện hiển thị số lượng requests
     function updateRequestsDisplay() {
-        document.getElementById('requestsCount').textContent = 'Số lượng requests đang truy cập: ' + requestCount;
+        document.getElementById('requestsCount').textContent = requestCount;
     }
 
     // Thực thi hàm incrementRequestCount khi trang được load
