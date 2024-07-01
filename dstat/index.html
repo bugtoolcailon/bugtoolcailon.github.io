@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Counter</title>
+<script>
+    // Function to read and update counter
+    function updateCounter() {
+        // Read current count from storage or initialize
+        let currentCount = localStorage.getItem('currentCount');
+        if (!currentCount) {
+            currentCount = 0;
+        } else {
+            currentCount = parseInt(currentCount);
+        }
+
+        // Increment current count
+        currentCount++;
+
+        // Update local storage
+        localStorage.setItem('currentCount', currentCount);
+
+        // Update display
+        document.getElementById('counter').innerText = currentCount;
+
+        // Write to api.txt if count is requested
+        let urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('count') && urlParams.get('count') === 'true') {
+            let totalCount = localStorage.getItem('totalCount');
+            if (!totalCount) {
+                totalCount = currentCount;
+            } else {
+                totalCount = parseInt(totalCount) + 1;
+            }
+            localStorage.setItem('totalCount', totalCount);
+
+            // Write to api.txt (this is a simplified example)
+            let fileContent = `${currentCount}\n${totalCount}`;
+            fetch('api.txt', {
+                method: 'PUT', // You may need to handle this properly in a server-side script
+                body: fileContent
+            });
+        }
+    }
+
+    // Function to initialize counter on page load
+    window.onload = function() {
+        updateCounter();
+    };
+</script>
+</head>
+<body>
+    <h1>Visitor Counter</h1>
+    <p>Number of visitors: <span id="counter">0</span></p>
+</body>
+</html>
