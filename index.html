@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notice</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
     />
     <style>@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
@@ -76,7 +76,8 @@ h2 {
 }
 
 p {
-  color: var(--pink-color);  display: inline-block;
+  color: var(--pink-color);
+  display: inline-block;
   font-size: 18px;
   transition: 0.25s;
 }
@@ -89,7 +90,6 @@ p {
   font-size: 18px;
   transition: 0.25s;
 }
-      
 
 .card__social a:hover {
   color: var(--pink-color);
@@ -111,29 +111,39 @@ button:hover {
   background-color: var(--pink-color);
 }
 </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="card">
-      <div class="card__img">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png" alt="" />
-      </div>
-      <h2>Hi Bro, Let DDoS My Site.</h2>
-      <p>Use Your Best Power If You Can!</p>
-      <div class="card__social">
-        <a target="_black" href="https://www.facebook.com/Developer.NXT.IT">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a target="_black" href="https://www.youtube.com/c/NguyenXuanTrinh">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a
-          target="_black"
-          href="https://github.com/@nguyenxuantrinhnotpd">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <button>Contact me</button>
+        <div class="card__img" data-sr="enter bottom scale up 20px over 1s">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png" alt="" />
+        </div>
+        <h2>Hi Bro, Let DDoS My Site.</h2>
+        <p>Use Your Best Power If You Can!</p>
+        <div class="card__social">
+            <a target="_black" href="https://www.facebook.com/Developer.NXT.IT">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a target="_black" href="https://www.youtube.com/c/NguyenXuanTrinh">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a target="_black" href="https://github.com/nguyenxuantrinhnotpd">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <button>Contact me</button>
     </div>
-  </body>
-  </html>
-  
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.card__img', {
+            delay: 200,
+            duration: 1000,
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            distance: '20px',
+            scale: 1,
+            mobile: false
+        });
+    </script>
+</body>
+</html>
